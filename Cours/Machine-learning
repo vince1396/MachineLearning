@@ -1,0 +1,39 @@
+Ils existent 2 type de machine learning : Classique / deep learning
+
+Dans les deux catégories ensuite on vas avoir 3 domaines : supervisé / non supervisé / Reinforcement learning
+
+
+
+Reinforcement learning : Le reinforcement learning est pour le moment pas assez développé pour dégager des réels profits. On parle de centre de coût car les méthodes pour l'utiliser ne sont pas encore assez dévelopé. Quelques exemples de "profit" : l'économie d'énergie (quand éteindre/allumer des serveurs lampes etc) / Le trading / génétique
+
+
+
+
+
+Supervisé : Utilise des données possédant un concept de feature et de variable cible. Nos données sont labélisés et on connais notre variable cible. En fonction d'une variable A que ce passe t'il sur une variable B. Dans le cas on l'on souhaite ouvrir notre téléphone via le mot "cacahuete" on vas vouloir analyser ce que le téléphone entend. Si le mot cacahuete est entendu un 1 logique est passé dans notre application et le téléphone s'ouvre. Sinon l'app renvoi 0 et ne fais rien.
+
+	Matrice et dataframe 
+
+	On peut voir ça comme un tableau : Les lignes sont des exemples/lignes/observation et les colonnes des features/variables d'entrées. Notre dernière colonne serait notre variable cible/target.
+
+Data Raw -> c'est notre jeu de donnée brute/cru
+DATA WRANGLING -> Par la suite on vas faire du DATA WRANGLING c'est le fait de manipuler des données pour les mettres en format CSV car on pourrait très bien utiliser des BDD/images/son/excel etc
+DATA -> Notre jeu de donnée est prêt à être regarder et étudier // MAINTENANT il faut savoir si oui ou non notre variable cible existe déjà dans le dataset. SI NON il faut faire un processus de 						LABELISATION/ANNOTATION. SI OUI il faut isolé cette variable cible.
+DATA CLEANING -> Comme le nom l'indique on clean up les data. Il est important d'avoir après le cleaning SEULEMENT DES INT ou DES FLOATS. 
+	Exemple dans le cas de donnée catégorique : une colonne |Vert| on ne peut pas dire que vert c'est 3 / Rouge 2 / Bleu 1 car on créer une hiérarchie qui n'a pas lieu d'être sur des couleurs donc on vas
+	vouloir destructuré la colonne en 3 colonnes.			|Rouge|
+	Dans les 3 colonnes on mettra des booleen				|Bleu|
+
+	La colonnes devient donc |Vert|Bleu|Rouge|
+							 |0   |1   |1    |
+							 |1   |0   |1    |	
+							 |0   |1   |0    |	
+
+
+
+Non Supervisé : On a des datas mais pas de variable cible (target/objectif). L'idée c'est de faire émerger des données ou des variables qui ne sont pas labélisés. On crée des rapprochements pouvant être une nouvelle colonne de notre dataset par exemple : un algo pour des articles de journaux qui pourrait créer des catégories de lui même en fonction des articles analysées.
+	
+	La clé c'est donc que l'unsupervised tu ne sais pas ce que tu cherches. La seule façon de savoir c'est donc de vérifier notre résultat et voir si c'est intéressant.
+
+3 grosse utilisations de l'unsupervised : Faciliter la data visualisation / Clustering (faire des regroupements et donc faire emerger des données non labélisés) / Dimensionality reduction (objectif : réduire la dimension des données afin d'améliorer les performances d'un algo supervised)
+
